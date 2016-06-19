@@ -1,5 +1,19 @@
 # devops-vagrant-demo
 
+This project builds a rest service in a unbuntu vagrant virtual box. Service connects to database to store and retrieve data.
+
+Frameworks used
+
+`Platform Ubuntu`
+`Language java`
+`Application Framework - SpringBoot Rest Framework`
+`Database - MySQL`
+`Build Tool - Maven`
+`Application Server - Tomcat8`
+`Web Server - Apache2`
+`Configuration Management tool - CHEF Solo`
+
+
 Create `cookbooks` folder in the project folder and download the below cookbooks
 
 `knife cookbook site install java
