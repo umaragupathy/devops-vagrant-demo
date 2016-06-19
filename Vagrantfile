@@ -23,9 +23,10 @@ Vagrant.configure("2") do |config|
    chef.add_recipe "java"
    chef.add_recipe "tomcat8"
    chef.add_recipe "apache2"
+   chef.add_recipe "apache2::mod_ssl"
    chef.add_recipe "maven"
    chef.add_recipe "devops-demo-service"  
-   chef.add_recipe "apache2::mod_ssl"
+   chef.add_recipe "devops-demo-service::appdeploy"
    chef.json = {
     "java" => {
       "install_flavor" => "oracle",
@@ -53,7 +54,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  #  config.vm.network "private_network", ip: "192.168.33.10"
+   config.vm.network "private_network", ip: "192.168.33.10"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
